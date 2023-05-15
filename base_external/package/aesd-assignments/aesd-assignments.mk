@@ -5,8 +5,7 @@
 #
 ##############################################################
 
-#TODO: Fill up the contents below in order to reference your assignment 3 git contents
-AESD_ASSIGNMENTS_VERSION = '8b526c656216acac227ef2260b9ed6dc123c3512'
+AESD_ASSIGNMENTS_VERSION = 'a565b8d0c601ed7ed8c36e00c6a5f7b6cb9cbb33'
 AESD_ASSIGNMENTS_SITE = 'git@github.com:cu-ecen-aeld/assignments-3-and-later-ingramlr.git'
 AESD_ASSIGNMENTS_SITE_METHOD = git
 AESD_ASSIGNMENTS_GIT_SUBMODULES = YES
