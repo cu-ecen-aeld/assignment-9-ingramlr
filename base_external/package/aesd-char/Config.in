@@ -1,0 +1,5 @@
+config BR2_PACKAGE_AESD_CHAR
+	bool "aesd-char"
+	depends on BR2_LINUX_KERNEL
+	help
+	  AESD Char device
