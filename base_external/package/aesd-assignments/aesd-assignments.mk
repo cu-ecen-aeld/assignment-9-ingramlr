@@ -2,9 +2,9 @@
 #
 # AESD-ASSIGNMENTS
 #
-############################################################## FULL KEY 6ee48acfcd27e4dff118ac63ce6bc3458095484b
+##############################################################
 
-AESD_ASSIGNMENTS_VERSION = '0846bee8e52545f266d6710d9a33a4f5b0812e58' 
+AESD_ASSIGNMENTS_VERSION = '173127e4b2415459209b5dfada4edef771944cb2' 
 AESD_ASSIGNMENTS_SITE = 'git@github.com:cu-ecen-aeld/assignments-3-and-later-ingramlr.git'
 AESD_ASSIGNMENTS_SITE_METHOD = git
 AESD_ASSIGNMENTS_GIT_SUBMODULES = YES
@@ -22,7 +22,7 @@ define AESD_ASSIGNMENTS_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/finder-app/finder.sh $(TARGET_DIR)/usr/bin
 	$(INSTALL) -m 0755 $(@D)/finder-app/finder-test.sh $(TARGET_DIR)/usr/bin
 	$(INSTALL) -m 0755 $(@D)/server/aesdsocket $(TARGET_DIR)/usr/bin
-	$(INSTALL) -m 0755 $(@D)/server/aesdsocket-start-stop $(TARGET_DIR)/etc/init.d/S99aesdsocket
+	$(INSTALL) -m 0755 $(@D)/server/aesdsocket-start-stop $(TARGET_DIR)/etc/init.d/S98aesdsocket
 endef
 
 $(eval $(generic-package))

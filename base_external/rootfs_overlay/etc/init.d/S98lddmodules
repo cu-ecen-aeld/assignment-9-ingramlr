@@ -1,22 +1,24 @@
-#!/bin/sh
+#! /bin/sh
+set -e
 
-
-start() {
-        /sbin/scull_load
-        /sbin/faulty_load faulty
-        modprobe hello
-}
-
-stop() {
-        rmmod hello
-        /sbin/faulty_unload faulty
-        /sbin/scull_unload
-}
-
+NAME=lddmodules
 case "$1" in
-        start|stop)
-                "$1";;
-        *)
-                echo "Usage: $0 {start|stop}"
-                exit 1
+	start)
+		echo "Loading drivers and modules"
+		/bin/aesdchar_load
+		/bin/faulty_load faulty
+		/bin/scull_load
+		modprobe hello
+		;;
+	stop)
+		echo "Unloading drivers and modules"
+		rmmod hello
+		/bin/aesdchar_unload
+        	/bin/module_unload faulty
+        	/bin/scull_unload
+        	;;
+    *)
+        echo "Usage: $0 {start|stop}"
+    exit 1
 esac
+exit 0
